@@ -6,11 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <script>
+        function message() {
+            const first = document.getElementById('firstname').value;
+            const last = document.getElementById('lastname').value;
+            const email = document.getElementById('emailadd').value;
+            const phone = document.getElementById('contact-box').value;
+            const method = document.getElementById('option').value;
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            console.log(checkboxes);
+            if (first == "") {
+                alert("Please enter firstname.");
+            } else if (last == "") {
+                alert("Please enter lastname.");
+            } else if (email == "") {
+                alert("Please enter your Email.");
+            } else if (!email.includes('@')) {
+                alert("Enter a valid email.");
+            } else if (phone == "") {
+                alert("Please enter your contact number.");
+            } else if (method == "") {
+                alert("Please select the contact method.");
+            } else if (checkboxes.length === 0) {
+                alert("Select an award.");
+            } else {
+                let message = "Welcome " + first + " " + last + "\n\n";
+                message += "Contact Method: " + method +" (";
+             if(method==="email") {
+                message+=email+")"+ "\n"
+             }
+             else if(method==="phone"){
+                message+=phone+")"+ "\n"
+             }   
+                message += "Selected Awards: ";
+                checkboxes.forEach(function (checkbox) {
+                    const label = checkbox.nextElementSibling;
+                    message += label.textContent + ", ";
+                });
+                message = message.slice(0, -2); // Remove the trailing comma and space
+                alert(message);
+            }
+        }
+    </script>
+    
 
 </head>
 
 <body>
-     <div class="main-body-box">
+    <div class="main-body-box">
         <div class="body-container">
             <div class="navbar">
                 <div class="navbar-logo">
@@ -87,7 +132,7 @@
 
             <div class="body-boxcontainer">
                 <div class="waterprint-text">get a custom quote</div>
-            
+
                 <div class="body-box">
                     <div class="div-body-text-header">
                         <p class="body-text-header">We’d love to create a custom award for you. Fill out the form below
@@ -101,17 +146,17 @@
 
                             <div class="Username">
                                 <div class="firstname">
-                                    <label for="username">FIRST NAME</label>
-                                    <input type="text" id="username" autocomplete="on" required autofocus>
+                                    <label for="firstname">FIRST NAME</label>
+                                    <input type="text" id="firstname" autocomplete="on" required autofocus>
                                 </div>
                                 <div class="lastname">
-                                    <label for="username">LAST NAME</label>
-                                    <input type="text" id="username" autocomplete="on" required autofocus>
+                                    <label for="lastname">LAST NAME</label>
+                                    <input type="text" id="lastname" autocomplete="on" required autofocus>
                                 </div>
                             </div>
                             <div class="mail-box">
                                 <label for="emailadd">EMAIL ADDRESS</label>
-                                <input type="text-2" id="mail-box" autocomplete="on" required autofocus>
+                                <input type="email" id="emailadd" autocomplete="on" required autofocus>
                             </div>
                             <div class="contact-box">
                                 <div class="phn-number">
@@ -120,8 +165,9 @@
                                 </div>
                                 <div class="contact-mathod">
                                     <label for="option">PREFERRED CONTACT METHOD</label>
-                                    <select name="option">
-                                        <option value="email">Choose one</option>
+
+                                    <select type="select" id="option" name="option">
+                                        <option value="">Choose one</option>
                                         <option value="email">Email</option>
                                         <option value="phone">Phone</option>
                                     </select>
@@ -130,18 +176,19 @@
                             <div class="checkbox-container">
                                 <p class="checkbox-text-header">TYPE OF AWARD</p>
                                 <p class="checkbox-text">Select all that you’re interested in</p>
+
                                 <div class="checkbox-action">
-                                    <input class="checkbox-button" type="checkbox">
-                                    <label class="checkbox-label" type="checkbox">Trophy </label> <br>
+                                    <input type="checkbox" id="checkBox">
+                                    <label class="checkbox-label" for="Trophy">Trophy </label> <br>
 
-                                    <input class="checkbox-button" type="checkbox">
-                                    <label class="checkbox-label" type="checkbox">Medallion </label> <br>
+                                    <input type="checkbox" id="checkBox">
+                                    <label class="checkbox-label" for="Medallion">Medallion </label> <br>
 
-                                    <input class="checkbox-button" type="checkbox">
-                                    <label class="checkbox-label" type="checkbox">Ribbon </label> <br>
+                                    <input type="checkbox" id="checkBox">
+                                    <label class="checkbox-label" for="Ribbon">Ribbon </label> <br>
 
-                                    <input class="checkbox-button" type="checkbox">
-                                    <label class="checkbox-label" type="checkbox">Plaque </label>
+                                    <input type="checkbox" id="checkBox">
+                                    <label class="checkbox-label" for="Plaque">Plaque </label>
                                 </div>
                             </div>
 
@@ -149,16 +196,18 @@
                                 <h1>NOTES</h1>
                                 <p class="note-text">Do you have any questions for us? Anything you think we should know
                                     before we start crunching numbers? Any highly-specific requests?</p>
-                                <div class="note-box"></div>
+                                <!-- <div class="note-box"> -->
+                                    <input type="textarea" id="notebox" class="note-box">
+                                <!-- </div> -->
                             </div>
 
                             <div class="button-box">
-                                <button type="submit" onclick="message()">SUBMIT</button>
+                                <button id="submit-button" type="submit" onclick="message()">SUBMIT</button>
                             </div>
                         </form>
                     </div>
                 </div>
-            
+
             </div>
             <div class="footerbox">crafting custom trophies, plaques and medals since 1942 <br>
                 Privacy Policy | Site Map

@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+ }
 
-.main-body-box{
+.main-body-box {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 
 }
 
@@ -78,8 +78,7 @@
     height: 10px;
     width: 13.75rem;
     fill: rgba(113, 18, 75, 0.13);
-    
-    
+    /* position: absolute; */
 
 }
 
@@ -88,10 +87,11 @@
     /* display: grid;  
      justify-items: center;
       */
-     /* column-gap: 5px;
+    /* column-gap: 5px;
      row-gap: 5px;  */
 
 }
+
 .waterprint-text {
     color: #71124B;
     font-family: 'Poppins', sans-serif;
@@ -99,7 +99,7 @@
     font-weight: 700;
     line-height: 1.1875rem;
     margin-left: 23rem;
-    
+
 }
 
 .body-box {
@@ -107,9 +107,9 @@
     height: 57.5625rem;
     border-radius: 0.6875rem;
     background: #FFF;
-    border: 2px solid red;
+
     margin-left: 22rem;
-    
+
 }
 
 .div-body-text-header {
@@ -129,24 +129,7 @@
 
 }
 
-
-
-.form-box form input[type="text"],
-.form-box form input[type="text"] {
-    /* font-family: 'Poppins', sans-serif;
-    color: var(--Trout, #495057);
-    font-size: 0.8125rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.21875rem;
-
-    width: 24.6875rem;
-    height: 2.25rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.25rem;
-    border: 1px solid var(--Ghost, #CED4DA);
-    background: var(--White, #FFF); */
-
+#firstname, #lastname {
     color: #67003E;
     font-family: 'Poppins', sans-serif;
     font-size: 0.875rem;
@@ -163,8 +146,7 @@
 .firstname {
     margin-left: 90px;
     color: #67003E;
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid red;
+    font-family: Rowdies;
 
 }
 
@@ -172,9 +154,7 @@
     margin-left: 10px;
 
     color: #67003E;
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid red;
-
+    font-family: Rowdies;
 }
 
 .Username {
@@ -182,31 +162,23 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: none;
-    /* column-gap: none;
-    row-gap: 1000px; */
-
-    border: 1px solid red;
-
 
 }
 
 .mail-box {
     margin-top: 1.6rem;
     color: #67003E;
-    font-family: 'Poppins', sans-serif;
+    font-family: Rowdies;
     margin-left: 90px;
-    border: 1px solid red;
+
 }
 
-.form-box form input[type="text-2"] {
-
-
+#emailadd{
     width: 29.125rem;
     height: 2.3125rem;
 
     border-radius: 0.25rem;
     border: 2px solid #71124B;
-
 
 }
 
@@ -215,34 +187,33 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: none;
-    border: 1px solid red;
+
 }
 
-.form-box form select[name="option"] {
+#option{
     color: #2C2629;
     font-family: 'Poppins', sans-serif;
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.5rem;
 
-    width: 14.125rem;
+    width: 14.5rem;
     height: 2.3125rem;
     border-radius: 0.25rem;
     border: 2px solid #71124B;
 
-}
 
+}
 .form-box form label[for="option"] {
     color: #67003E;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.875rem;
-    font-style: normal;
+    font-family: Rowdies;
+    font-size: 0.86rem;
     font-weight: 400;
     line-height: 1.1875rem;
 
 }
 
-.form-box form input[type="tel"] {
+#contact-box{
     width: 14.125rem;
     height: 2.3125rem;
     border-radius: 0.25rem;
@@ -253,9 +224,9 @@
 .form-box form label[for="contact-box"] {
 
     color: #67003E;
-    font-family: 'Poppins', sans-serif;
+    font-family: Rowdies;
     font-size: 0.875rem;
-    font-style: normal;
+
     font-weight: 400;
     line-height: 1.1875rem;
 }
@@ -272,6 +243,7 @@
 .checkbox-container {
     margin-top: 2rem;
     margin-left: 90px;
+    margin-bottom: 10px;
 
 }
 
@@ -279,7 +251,7 @@
     width: 8.375rem;
     height: 1.0625rem;
     color: #67003E;
-    font-family: 'Poppins', sans-serif;
+    font-family: Rowdies;
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
@@ -288,33 +260,19 @@
 
 .checkbox-text {
     color: #2C2629;
-    font-family: 'Poppins', sans-serif;
+    font-family: Rowdies;
     font-size: 0.75rem;
-    font-style: normal;
-    font-weight: 600;
+    font-weight: 200;
     line-height: 1.5rem;
+    margin-bottom: 10px;
 
 }
 
-.form-box form label[ type="checkbox"] {
-    color: #2C2629;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-
-
-    border: 1px solid red;
-
-    /* 200% */
-}
-
-.form-box form input[ type="checkbox"] {
-    /* width: 1.25rem;
-height: 1.25rem;
-border-radius: 0.25rem;
-border: 2px solid #71124B; */
-
+#checkbox{
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.25rem;
+    border: 2px solid #71124B;
 }
 
 .checkbox-button {
@@ -337,14 +295,21 @@ border: 2px solid #71124B; */
 }
 
 .checkbox-button {
-    width: 1.25rem !important;
+    /* width: 1.25rem !important;
     height: 1.25rem !important;
-    border: 2px solid #71124B !important;
+    border: 2px solid #71124B !important; */
 
 }
 
 .checkbox-label {
-    margin-top: 0px !important;
+    /* margin-top: 0px !important; */
+    color: #2C2629;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+
+
 }
 
 .note-container {
@@ -356,11 +321,11 @@ h1 {
     margin-left: 90px;
 
     color: #67003E;
-    font-family: 'Poppins', sans-serif;
+    font-family: Rowdies;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.1875rem;
- 
+
 
 }
 
@@ -373,49 +338,51 @@ h1 {
     font-size: 0.75rem;
     font-weight: 600;
     line-height: 1.25rem;
-
 }
-.note-box{
+.note-box {
     margin-top: 5px;
     margin-left: 90px;
     width: 29.125rem;
-height: 8rem;
+    height: 8rem;
     border-radius: 0.25rem;
-border: 2px solid #71124B;
+    border: 2px solid #71124B;
 }
-.button-box{
+
+.button-box {
     display: flex;
     justify-content: center;
 }
-.form-box form button[ type="submit"] {
-  
+
+
+#submit-button{
     margin-top: 2rem;
     color: #FFF;
-text-align: center;
-font-family: Rowdies;
-font-size: 0.875rem;
+    text-align: center;
+    font-family: Rowdies;
+    font-size: 0.875rem;
 
-font-weight: 400;
-line-height: 1.1875rem; 
+    font-weight: 400;
+    line-height: 1.1875rem;
 
-width: 5.875rem;
-height: 2.3125rem;
+    width: 5.875rem;
+    height: 2.3125rem;
 
 
-border-radius: 0.25rem;
-border: 2px solid #71124B;
-background: #67003E;
-
+    border-radius: 0.25rem;
+    border: 2px solid #71124B;
+    background: #67003E;
+    cursor: pointer;
 }
-.footerbox{
-    color: #71124B;
-font-family: Rowdies;
-font-size: 0.625rem;
-font-weight: 700;
-line-height: 1.1875rem;
-text-transform: uppercase;
 
-text-align: center;
-margin-left: 5rem;
-margin-top: 4rem;
+.footerbox {
+    color: #71124B;
+    font-family: Rowdies;
+    font-size: 0.625rem;
+    font-weight: 700;
+    line-height: 1.1875rem;
+    text-transform: uppercase;
+
+    text-align: center;
+    margin-left: 5rem;
+    margin-top: 3rem;
 }
